@@ -15,7 +15,7 @@ data <- data[data$Date == "1/2/2007" | data$Date == "2/2/2007"]
 ## Create new $Datetime column by pasting original $Date and $Timeto act as x-axis for plot
 data$Datetime <- as.POSIXct(paste(data$Date,data$Time), format = "%d/%m/%Y %H:%M:%S")
 
-## Open 'plot3.png' and set line chart to Time (x-axis) by Sub_metering_1/2/3 (y-axis) 
+## Open 'plot3.png' and create 4 charts, separated by par(mfcol)
 png(filename = "plot4.png",width=480,height=480)
 par(mfcol = c(2,2))
 
